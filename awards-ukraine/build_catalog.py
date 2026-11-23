@@ -53,4 +53,5 @@ for row in table.rows:
     row.cells[1].width = Cm(10.3)
     row.cells[2].width = Cm(4.7)
 d.save(root / "Каталог_нагород_України_чернетка.docx")
+(root / "build_count.txt").write_text(str(len(names)) + "\n", encoding="utf-8")
 print("Records:", len(names))
