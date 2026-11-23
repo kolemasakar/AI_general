@@ -1,45 +1,43 @@
 group,award,source_url,file,width_px,height_px,quality_status
-mod,Нагрудний знак «Хрест особливих заслуг»,https://mod.gov.ua/assets/03-01-nahrudnyi-znak-khrest-osoblyvykh-zasluh-847771ca9b.webp,mod_01.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Нагрудний знак «За зразкову службу»,https://mod.gov.ua/assets/03-02-nahrudnyi-znak-za-zrazkovu-sluzhbu-22b6b0d920.webp,mod_02.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Залізний хрест»,https://mod.gov.ua/assets/03-03-medal-zaliznyi-khrest-5f77f30036.webp,mod_03.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Лицарський хрест»,https://mod.gov.ua/assets/03-04-medal-lytsarskyi-khrest-ed648c9c49.webp,mod_04.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Воєнний хрест»,https://mod.gov.ua/assets/03-05-medal-voiennyi-khrest-a0209bace1.webp,mod_05.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест доблесті»,https://mod.gov.ua/assets/03-06-medal-khrest-doblesti-4e83529e8f.webp,mod_06.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «За поранення»,https://mod.gov.ua/assets/03-07-medal-za-poranennia-13897b7da1.webp,mod_07.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест пошани»,https://mod.gov.ua/assets/03-08-medal-khrest-poshany-3864d43ebd.webp,mod_08.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Золотий тризуб»,https://mod.gov.ua/assets/03-09-medal-zolotyi-tryzub-847e65e08a.webp,mod_09.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «За зміцнення обороноздатності»,https://mod.gov.ua/assets/03-10-medal-za-zmitsnennia-oboronozdatnosti-753679492b.webp,mod_10.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Зірка військового братерства»,https://mod.gov.ua/assets/03-11-medal-zirka-viiskovoho-braterstva-25255d3803.webp,mod_11.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Захиснику України»,https://mod.gov.ua/assets/03-12-medal-zakhysnyku-ukrainy-04b4cd363b.webp,mod_12.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «За сприяння обороні»,https://mod.gov.ua/assets/03-13-medal-za-spryiannia-oboroni-17fc386427.webp,mod_13.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Нагрудний знак «За зразкову службу»,https://mod.gov.ua/assets/03-15-medal-khrest-sukhoputnykh-viisk-ebd0213061.webp,mod_14.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Нагрудний знак «За військову доблесть»,https://mod.gov.ua/assets/03-15-medal-khrest-sukhoputnykh-viisk-ebd0213061.webp,mod_15.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Сухопутних військ»,https://mod.gov.ua/assets/03-15-medal-khrest-sukhoputnykh-viisk-ebd0213061.webp,mod_16.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Повітряних Сил»,https://mod.gov.ua/assets/03-16-medal-khrest-povitrianykh-syl-48770e38ef.webp,mod_17.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Військово-Морських Сил»,https://mod.gov.ua/assets/03-17-medal-khrest-viiskovo-morskykh-syl-e371cb7f4e.webp,mod_18.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Сил спеціальних операцій»,https://mod.gov.ua/assets/03-18-medal-khrest-syl-spetsialnykh-operatsii-5adb975335.webp,mod_19.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Сил територіальної оборони»,https://mod.gov.ua/assets/03-19-medal-khrest-syl-terytorialnoi-oborony-bf9db35514.webp,mod_20.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Сил логістики»,https://mod.gov.ua/assets/03-20-medal-khrest-syl-lohistyky-987c66d691.webp,mod_21.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Сил підтримки»,https://mod.gov.ua/assets/03-21-medal-khrest-syl-pidtrymky-f6d109552c.webp,mod_22.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Медичних сил»,https://mod.gov.ua/assets/03-22-medal-khrest-medychnykh-syl-7d68bf5be4.webp,mod_23.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Десантно-штурмових військ»,https://mod.gov.ua/assets/03-23-medal-khrest-desantno-shturmovykh-viisk-d747796652.webp,mod_24.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Військ зв’язку та кібербезпеки»,https://mod.gov.ua/assets/03-25-medal-khrest-viisk-zviazku-ta-kiberbezpeky-1958f1d9ad.webp,mod_25.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест ракетних військ і артилерії»,https://mod.gov.ua/assets/03-26-medal-khrest-raketnykh-viisk-i-artylerii-aba8fb255d.webp,mod_26.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Хрест Державної спеціальної служби транспорту»,https://mod.gov.ua/assets/03-27-medal-khrest-derzhavnoi-spetsialnoi-sluzhby-transportu-52c77b797e.webp,mod_27.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Воїн-миротворець»,https://mod.gov.ua/assets/03-28-medal-voin-myrotvorets-6fe14f45cc.webp,mod_28.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «Ветеран служби»,https://mod.gov.ua/assets/03-29-medal-veteran-sluzhby-c57235725a.webp,mod_29.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «20 років сумлінної служби»,https://mod.gov.ua/assets/03-30-medal-20-rokiv-sumlinnoi-sluzhby-9dd26fa389.webp,mod_30.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «15 років сумлінної служби»,https://mod.gov.ua/assets/03-31-medal-15-rokiv-sumlinnoi-sluzhby-d3ba521b77.webp,mod_31.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-mod,Медаль «10 років сумлінної служби»,https://mod.gov.ua/assets/03-32-medal-10-rokiv-sumlinnoi-sluzhby-f1e3d441c7.webp,mod_32.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«ХРЕСТ ЗАСЛУГИ»,https://mod.gov.ua/assets/04-01-pochesnyi-nahrudnyi-znak-khrest-zasluhy-426e5df916.webp,commander_01.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«ХРЕСТ ХОРОБРИХ»,https://mod.gov.ua/assets/04-02-pochesnyi-nahrudnyi-znak-khrest-khorobrykh-1d48f0536b.webp,commander_02.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«СТАЛЕВИЙ ХРЕСТ»,https://mod.gov.ua/assets/04-03-pochesnyi-nahrudnyi-znak-stalevyi-khrest-04d2f82c10.webp,commander_03.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«СРІБНИЙ ХРЕСТ»,https://mod.gov.ua/assets/04-04-pochesnyi-nahrudnyi-znak-sribnyi-khrest-1c5e8debe8.webp,commander_04.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«ЗОЛОТИЙ ХРЕСТ»,https://mod.gov.ua/assets/04-05-pochesnyi-nahrudnyi-znak-zolotyi-khrest-b8558614ce.webp,commander_05.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«ХРЕСТ ВІЙСЬКОВА ЧЕСТЬ»,https://mod.gov.ua/assets/04-06-pochesnyi-nahrudnyi-znak-khrest-viiskova-chest-dd36e8fdcc.webp,commander_06.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«ЗА СУМЛІННУ СЛУЖБУ»,https://mod.gov.ua/assets/04-07-pochesnyi-nahrudnyi-znak-za-sumlinnu-sluzhbu-3378b5b60f.webp,commander_07.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«КОМБАТАНТСЬКИЙ ХРЕСТ»,https://mod.gov.ua/assets/04-08-pochesnyi-nahrudnyi-znak-kombatantskyi-khrest-1-c89a395a70.webp,commander_08.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,« ЧЕСТЬ ТА ПАМ’ЯТЬ »,https://mod.gov.ua/assets/04-09-nahrudnyi-znak-chest-ta-pamiat-8846e71e9b.webp,commander_09.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«ЗА НЕЗЛАМНІСТЬ»,https://mod.gov.ua/assets/04-10-nahrudnyi-znak-za-nezlamnist-f8d71e5031.webp,commander_10.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«ЗА ЗБЕРЕЖЕНЕ ЖИТТЯ»,https://mod.gov.ua/assets/04-11-nahrudnyi-znak-za-zberezhennia-zhyttia-e338ceff26.webp,commander_11.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
-commander,«ЗА СПРИЯННЯ ВІЙСЬКУ»,https://mod.gov.ua/assets/04-12-nahrudnyi-znak-za-spryiannia-viisku-cb2a1c8ebe.webp,commander_12.webp,1920,1080,SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED
+mod,Нагрудний знак «Хрест особливих заслуг»,https://mod.gov.ua/assets/03-01-nahrudnyi-znak-khrest-osoblyvykh-zasluh-847771ca9b.webp,mod_01.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_833
+mod,Нагрудний знак «За зразкову службу»,https://mod.gov.ua/assets/03-02-nahrudnyi-znak-za-zrazkovu-sluzhbu-22b6b0d920.webp,mod_02.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_699
+mod,Медаль «Залізний хрест»,https://mod.gov.ua/assets/03-03-medal-zaliznyi-khrest-5f77f30036.webp,mod_03.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_549
+mod,Медаль «Лицарський хрест»,https://mod.gov.ua/assets/03-04-medal-lytsarskyi-khrest-ed648c9c49.webp,mod_04.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_655
+mod,Медаль «Воєнний хрест»,https://mod.gov.ua/assets/03-05-medal-voiennyi-khrest-a0209bace1.webp,mod_05.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_541
+mod,Медаль «Хрест доблесті»,https://mod.gov.ua/assets/03-06-medal-khrest-doblesti-4e83529e8f.webp,mod_06.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_547
+mod,Медаль «За поранення»,https://mod.gov.ua/assets/03-07-medal-za-poranennia-13897b7da1.webp,mod_07.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_503
+mod,Медаль «Хрест пошани»,https://mod.gov.ua/assets/03-08-medal-khrest-poshany-3864d43ebd.webp,mod_08.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_517
+mod,Медаль «Золотий тризуб»,https://mod.gov.ua/assets/03-09-medal-zolotyi-tryzub-847e65e08a.webp,mod_09.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_567
+mod,Медаль «За зміцнення обороноздатності»,https://mod.gov.ua/assets/03-10-medal-za-zmitsnennia-oboronozdatnosti-753679492b.webp,mod_10.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1083
+mod,Медаль «Зірка військового братерства»,https://mod.gov.ua/assets/03-11-medal-zirka-viiskovoho-braterstva-25255d3803.webp,mod_11.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1009
+mod,Медаль «Захиснику України»,https://mod.gov.ua/assets/03-12-medal-zakhysnyku-ukrainy-04b4cd363b.webp,mod_12.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_671
+mod,Медаль «За сприяння обороні»,https://mod.gov.ua/assets/03-13-medal-za-spryiannia-oboroni-17fc386427.webp,mod_13.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_733
+mod,Медаль «Хрест Сухопутних військ»,https://mod.gov.ua/assets/03-15-medal-khrest-sukhoputnykh-viisk-ebd0213061.webp,mod_14.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_865
+mod,Медаль «Хрест Повітряних Сил»,https://mod.gov.ua/assets/03-16-medal-khrest-povitrianykh-syl-48770e38ef.webp,mod_15.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_771
+mod,Медаль «Хрест Військово-Морських Сил»,https://mod.gov.ua/assets/03-17-medal-khrest-viiskovo-morskykh-syl-e371cb7f4e.webp,mod_16.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1077
+mod,Медаль «Хрест Сил спеціальних операцій»,https://mod.gov.ua/assets/03-18-medal-khrest-syl-spetsialnykh-operatsii-5adb975335.webp,mod_17.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1111
+mod,Медаль «Хрест Сил територіальної оборони»,https://mod.gov.ua/assets/03-19-medal-khrest-syl-terytorialnoi-oborony-bf9db35514.webp,mod_18.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1179
+mod,Медаль «Хрест Сил логістики»,https://mod.gov.ua/assets/03-20-medal-khrest-syl-lohistyky-987c66d691.webp,mod_19.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_717
+mod,Медаль «Хрест Сил підтримки»,https://mod.gov.ua/assets/03-21-medal-khrest-syl-pidtrymky-f6d109552c.webp,mod_20.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_743
+mod,Медаль «Хрест Медичних сил»,https://mod.gov.ua/assets/03-22-medal-khrest-medychnykh-syl-7d68bf5be4.webp,mod_21.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_729
+mod,Медаль «Хрест Десантно-штурмових військ»,https://mod.gov.ua/assets/03-23-medal-khrest-desantno-shturmovykh-viisk-d747796652.webp,mod_22.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1185
+mod,Медаль «Хрест Військ зв’язку та кібербезпеки»,https://mod.gov.ua/assets/03-25-medal-khrest-viisk-zviazku-ta-kiberbezpeky-1958f1d9ad.webp,mod_23.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1249
+mod,Медаль «Хрест ракетних військ і артилерії»,https://mod.gov.ua/assets/03-26-medal-khrest-raketnykh-viisk-i-artylerii-aba8fb255d.webp,mod_24.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1135
+mod,Медаль «Хрест Державної спеціальної служби транспорту»,https://mod.gov.ua/assets/03-27-medal-khrest-derzhavnoi-spetsialnoi-sluzhby-transportu-52c77b797e.webp,mod_25.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1655
+mod,Медаль «Воїн-миротворець»,https://mod.gov.ua/assets/03-28-medal-voin-myrotvorets-6fe14f45cc.webp,mod_26.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_659
+mod,Медаль «Ветеран служби»,https://mod.gov.ua/assets/03-29-medal-veteran-sluzhby-c57235725a.webp,mod_27.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_589
+mod,Медаль «20 років сумлінної служби»,https://mod.gov.ua/assets/03-30-medal-20-rokiv-sumlinnoi-sluzhby-9dd26fa389.webp,mod_28.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_921
+mod,Медаль «15 років сумлінної служби»,https://mod.gov.ua/assets/03-31-medal-15-rokiv-sumlinnoi-sluzhby-d3ba521b77.webp,mod_29.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_909
+mod,Медаль «10 років сумлінної служби»,https://mod.gov.ua/assets/03-32-medal-10-rokiv-sumlinnoi-sluzhby-f1e3d441c7.webp,mod_30.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_913
+commander,«ХРЕСТ ЗАСЛУГИ»,https://mod.gov.ua/assets/04-01-pochesnyi-nahrudnyi-znak-khrest-zasluhy-426e5df916.webp,commander_01.webp,1920,1080,ACCEPTED_VISIBLE_WIDTH_1315
+commander,«ХРЕСТ ХОРОБРИХ»,https://mod.gov.ua/assets/04-02-pochesnyi-nahrudnyi-znak-khrest-khorobrykh-1d48f0536b.webp,commander_02.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_825
+commander,«СТАЛЕВИЙ ХРЕСТ»,https://mod.gov.ua/assets/04-03-pochesnyi-nahrudnyi-znak-stalevyi-khrest-04d2f82c10.webp,commander_03.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_825
+commander,«СРІБНИЙ ХРЕСТ»,https://mod.gov.ua/assets/04-04-pochesnyi-nahrudnyi-znak-sribnyi-khrest-1c5e8debe8.webp,commander_04.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_825
+commander,«ЗОЛОТИЙ ХРЕСТ»,https://mod.gov.ua/assets/04-05-pochesnyi-nahrudnyi-znak-zolotyi-khrest-b8558614ce.webp,commander_05.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_825
+commander,«ХРЕСТ ВІЙСЬКОВА ЧЕСТЬ»,https://mod.gov.ua/assets/04-06-pochesnyi-nahrudnyi-znak-khrest-viiskova-chest-dd36e8fdcc.webp,commander_06.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_825
+commander,«ЗА СУМЛІННУ СЛУЖБУ»,https://mod.gov.ua/assets/04-07-pochesnyi-nahrudnyi-znak-za-sumlinnu-sluzhbu-3378b5b60f.webp,commander_07.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_825
+commander,«КОМБАТАНТСЬКИЙ ХРЕСТ»,https://mod.gov.ua/assets/04-08-pochesnyi-nahrudnyi-znak-kombatantskyi-khrest-1-c89a395a70.webp,commander_08.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_825
+commander,« ЧЕСТЬ ТА ПАМ’ЯТЬ »,https://mod.gov.ua/assets/04-09-nahrudnyi-znak-chest-ta-pamiat-8846e71e9b.webp,commander_09.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_601
+commander,«ЗА НЕЗЛАМНІСТЬ»,https://mod.gov.ua/assets/04-10-nahrudnyi-znak-za-nezlamnist-f8d71e5031.webp,commander_10.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_553
+commander,«ЗА ЗБЕРЕЖЕНЕ ЖИТТЯ»,https://mod.gov.ua/assets/04-11-nahrudnyi-znak-za-zberezhennia-zhyttia-e338ceff26.webp,commander_11.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_761
+commander,«ЗА СПРИЯННЯ ВІЙСЬКУ»,https://mod.gov.ua/assets/04-12-nahrudnyi-znak-za-spryiannia-viisku-cb2a1c8ebe.webp,commander_12.webp,1920,1080,VISIBLE_WIDTH_BELOW_945_719
