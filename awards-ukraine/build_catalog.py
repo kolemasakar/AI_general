@@ -7,6 +7,10 @@ from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
+def norm(value):
+    value = re.sub(r"^(нагрудний знак|медаль)\s+", "", value.casefold())
+    return re.sub(r"\W+", "", value)
+
 root = Path(__file__).resolve().parent
 names = [line.strip() for line in (root / "catalog_names.txt").read_text(encoding="utf-8").splitlines() if line.strip()]
 sources = {}
@@ -15,7 +19,7 @@ if manifest.exists():
     with manifest.open(encoding="utf-8",newline="") as f:
         for item in csv.DictReader(f):
             if item["quality_status"].startswith("ACCEPTED_"):
-                key = re.sub(r"\\W+", "", item["award"].casefold())
+                key = norm(item["award"])
                 png = root / "images" / (Path(item["file"]).stem + ".png")
                 if png.exists(): sources.setdefault(key,png)
 d = Document()
@@ -42,7 +46,7 @@ for no, name in enumerate(names, 1):
     cells = table.add_row().cells
     cells[0].text = str(no)
     cells[1].text = name
-    key = re.sub(r"\\W+", "", name.casefold())
+    key = norm(name)
     if key in sources:
         cells[2].paragraphs[0].add_run().add_picture(str(sources[key]), width=Cm(4))
     else:
