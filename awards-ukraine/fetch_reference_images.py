@@ -8,6 +8,8 @@ from PIL import Image
 root=Path(__file__).resolve().parent
 out=root / "images_reference"
 out.mkdir(exist_ok=True)
+final=root / "images"
+final.mkdir(exist_ok=True)
 sources=[
  ("mod","https://mod.gov.ua/explanation/zaohochuvalni-vidznaki-ministerstva-oboroni"),
  ("commander","https://mod.gov.ua/explanation/pochesni-nagrudni-znaki-golovnokomanduvacha-zbrojnih-sil-ukrayini"),
@@ -26,8 +28,8 @@ for group,url in sources:
  for heading in soup.find_all(["h3","h4"]):
   name=heading.get_text(" ",strip=True)
   if not (name.startswith("Медаль") or name.startswith("Нагрудний") or name.startswith("«") or name.startswith("“")): continue
-  image=heading.find_next("img")
-  if image is None: continue
+  image=heading.find_next(["img","h3","h4"])
+  if image is None or image.name != "img": continue
   raw=image.get("src") or image.get("data-src") or ""
   if not raw and image.get("srcset"):raw=image["srcset"].split(",")[-1].strip().split(" ")[0]
   if not raw:continue
@@ -40,8 +42,17 @@ for group,url in sources:
    path.write_bytes(r.content)
    with Image.open(path) as im:
     width,height=im.size
-    # This validates source pixel width only, not effective medal detail width.
-    status="SOURCE_WIDTH_GE_945; DETAIL_NOT_VERIFIED" if width>=945 else "SOURCE_TOO_SMALL"
+    status="SOURCE_ONLY; QUALITY_UNVERIFIED"
+    if im.mode in ("RGBA","LA") and im.getextrema()[-1][0] < 255:
+     rgba=im.convert("RGBA")
+     bb=rgba.getchannel("A").getbbox()
+     if bb and bb[2]-bb[0]>=945:
+      cropped=rgba.crop(bb)
+      cropped.save(final / f"{group}_{count:02d}.png",dpi=(600,600))
+      status=f"ACCEPTED_VISIBLE_WIDTH_{cropped.width}"
+     else:status=f"VISIBLE_WIDTH_BELOW_945_{bb[2]-bb[0] if bb else 0}"
+    elif width<945:status="SOURCE_WIDTH_BELOW_945"
+    else:status="OPAQUE_BACKGROUND; QUALITY_UNVERIFIED"
    rows.append([group,name,src,path.name,width,height,status])
   except Exception as ex:
    if path.exists():path.unlink()
