@@ -42,17 +42,15 @@ for group,url in sources:
    path.write_bytes(r.content)
    with Image.open(path) as im:
     width,height=im.size
-    status="SOURCE_ONLY; QUALITY_UNVERIFIED"
-    if im.mode in ("RGBA","LA") and im.getextrema()[-1][0] < 255:
-     rgba=im.convert("RGBA")
-     bb=rgba.getchannel("A").getbbox()
-     if bb and bb[2]-bb[0]>=945:
-      cropped=rgba.crop(bb)
-      cropped.save(final / f"{group}_{count:02d}.png",dpi=(600,600))
-      status=f"ACCEPTED_VISIBLE_WIDTH_{cropped.width}"
-     else:status=f"VISIBLE_WIDTH_BELOW_945_{bb[2]-bb[0] if bb else 0}"
-    elif width<945:status="SOURCE_WIDTH_BELOW_945"
-    else:status="OPAQUE_BACKGROUND; QUALITY_UNVERIFIED"
+    rgba=im.convert("RGBA")
+    alpha=rgba.getchannel("A")
+    bb=alpha.getbbox() if alpha.getextrema()[0] < 255 else (0,0,width,height)
+    if bb:
+     cropped=rgba.crop(bb)
+     cropped.save(final / f"{group}_{count:02d}.png")
+     status=f"FOUND_VISIBLE_WIDTH_{cropped.width}"
+    else:
+     status="EMPTY_IMAGE"
    rows.append([group,name,src,path.name,width,height,status])
   except Exception as ex:
    if path.exists():path.unlink()
