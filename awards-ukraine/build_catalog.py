@@ -9,6 +9,8 @@ from docx.oxml.ns import qn
 
 def norm(value):
     value = re.sub(r"^(нагрудний знак|медаль)\s+", "", value.casefold())
+    found = re.findall(r"«([^»]+)»", value)
+    if found: value = found[0]
     return re.sub(r"\W+", "", value)
 
 root = Path(__file__).resolve().parent
@@ -18,10 +20,18 @@ manifest = root / "image_sources.csv"
 if manifest.exists():
     with manifest.open(encoding="utf-8",newline="") as f:
         for item in csv.DictReader(f):
-            if item["quality_status"].startswith("ACCEPTED_"):
+            if item["quality_status"].startswith(("ACCEPTED_", "FOUND_")):
                 key = norm(item["award"])
                 png = root / "images" / (Path(item["file"]).stem + ".png")
                 if png.exists(): sources.setdefault(key,png)
+commons = {}
+commons_manifest = root / "image_sources_commons.csv"
+if commons_manifest.exists():
+    with commons_manifest.open(encoding="utf-8", newline="") as f:
+        for item in csv.DictReader(f):
+            if item["status"].startswith("FOUND_"):
+                p = root / "images" / f"commons_{int(item['catalog_number']):03d}.png"
+                if p.exists(): commons[int(item["catalog_number"])] = p
 d = Document()
 section = d.sections[0]
 section.top_margin, section.bottom_margin = Cm(1.5), Cm(1.5)
@@ -47,8 +57,9 @@ for no, name in enumerate(names, 1):
     cells[0].text = str(no)
     cells[1].text = name
     key = norm(name)
-    if key in sources:
-        cells[2].paragraphs[0].add_run().add_picture(str(sources[key]), width=Cm(4))
+    image = sources.get(key) or commons.get(no)
+    if image:
+        cells[2].paragraphs[0].add_run().add_picture(str(image), width=Cm(4))
     else:
         cells[2].text = "—"
     for c in cells: c.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
@@ -58,4 +69,5 @@ for row in table.rows:
     row.cells[2].width = Cm(4.7)
 d.save(root / "Каталог_нагород_України_чернетка.docx")
 (root / "build_count.txt").write_text(str(len(names)) + "\n", encoding="utf-8")
+(root / "image_coverage.txt").write_text(f"total={len(names)}\nwith_image={sum(1 for i,n in enumerate(names,1) if (norm(n) in sources or i in commons))}\n",encoding="utf-8")
 print("Records:", len(names))
