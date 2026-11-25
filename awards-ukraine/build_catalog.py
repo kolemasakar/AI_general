@@ -49,6 +49,14 @@ if english_manifest.exists():
             if item["status"].startswith("FOUND_"):
                 p = root / "images" / f"english_{int(item['catalog_number']):03d}.png"
                 if p.exists(): english[int(item["catalog_number"])] = p
+nas={}
+nas_manifest=root/"image_sources_nas.csv"
+if nas_manifest.exists():
+    with nas_manifest.open(encoding="utf-8",newline="") as f:
+        for item in csv.DictReader(f):
+            if item["status"].startswith("FOUND_"):
+                pic=root/"images"/f"nas_{int(item['catalog_number']):03d}.png"
+                if pic.exists():nas[int(item["catalog_number"])]=pic
 d = Document()
 section = d.sections[0]
 section.top_margin, section.bottom_margin = Cm(1.5), Cm(1.5)
@@ -74,7 +82,7 @@ for no, name in enumerate(names, 1):
     cells[0].text = str(no)
     cells[1].text = name
     key = norm(name)
-    image = sources.get(key) or english.get(no) or commons.get(no) or wiki.get(no)
+    image = nas.get(no) or sources.get(key) or english.get(no) or commons.get(no) or wiki.get(no)
     if image:
         cells[2].paragraphs[0].add_run().add_picture(str(image), width=Cm(4))
     else:
@@ -86,5 +94,5 @@ for row in table.rows:
     row.cells[2].width = Cm(4.7)
 d.save(root / "Каталог_нагород_України_чернетка.docx")
 (root / "build_count.txt").write_text(str(len(names)) + "\n", encoding="utf-8")
-(root / "image_coverage.txt").write_text(f"total={len(names)}\nwith_image={sum(1 for i,n in enumerate(names,1) if (norm(n) in sources or i in commons or i in wiki or i in english))}\n",encoding="utf-8")
+(root / "image_coverage.txt").write_text(f"total={len(names)}\nwith_image={sum(1 for i,n in enumerate(names,1) if (norm(n) in sources or i in commons or i in wiki or i in english or i in nas))}\n",encoding="utf-8")
 print("Records:", len(names))
