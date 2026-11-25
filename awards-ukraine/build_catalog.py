@@ -110,5 +110,10 @@ for row in table.rows:
     row.cells[2].width = Cm(4.7)
 d.save(root / "Каталог_нагород_України_чернетка.docx")
 (root / "build_count.txt").write_text(str(len(names)) + "\n", encoding="utf-8")
+(root / "missing_images.txt").write_text(
+    "\n".join(f"{i}. {name}" for i,name in enumerate(names,1)
+              if not (norm(name) in sources or i in english or i in commons or i in wiki or i in nas or i in asv or i in president)) + "\n",
+    encoding="utf-8"
+)
 (root / "image_coverage.txt").write_text(f"total={len(names)}\nwith_image={sum(1 for i,n in enumerate(names,1) if (norm(n) in sources or i in commons or i in wiki or i in english or i in nas or i in asv or i in president))}\n",encoding="utf-8")
 print("Records:", len(names))
