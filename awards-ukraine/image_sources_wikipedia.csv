@@ -1,12 +1,10 @@
 catalog_number,award,article,image_url,source_url,status
 1,Звання «Герой України» — орден «Золота Зірка»,,,,SEARCH_ERROR
-2,Звання «Герой України» — орден Держави,,,,SEARCH_ERROR
-3,Відзнака Президента України «Хрест бойових заслуг»,,,,SEARCH_ERROR
 4,Орден Свободи,,,,SEARCH_ERROR
-5,"Орден князя Ярослава Мудрого I, II, III, IV, V ступенів",,,,SEARCH_ERROR
-6,Орден Європи,,,,SEARCH_ERROR
-7,"Орден «За заслуги» I, II, III ступенів",,,,SEARCH_ERROR
-8,"Орден Богдана Хмельницького I, II, III ступенів",,,,SEARCH_ERROR
+5,"Орден князя Ярослава Мудрого I, II, III, IV, V ступенів",,,,NO_AWARD_IMAGE
+6,Орден Європи,,,,NO_AWARD_IMAGE
+7,"Орден «За заслуги» I, II, III ступенів",,,,NO_AWARD_IMAGE
+8,"Орден Богдана Хмельницького I, II, III ступенів",,,,NO_AWARD_IMAGE
 9,Орден Героїв Небесної Сотні,,,,SEARCH_ERROR
 10,"Орден «За мужність» I, II, III ступенів",,,,SEARCH_ERROR
 11,"Орден княгині Ольги I, II, III ступенів",,,,SEARCH_ERROR
