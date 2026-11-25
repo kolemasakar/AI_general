@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add awards-ukraine/build_count.txt awards-ukraine/image_coverage.txt awards-ukraine/*.docx awards-ukraine/image_sources.csv awards-ukraine/image_sources_commons.csv awards-ukraine/image_sources_wikipedia.csv awards-ukraine/image_sources_english.csv awards-ukraine/image_sources_nas.csv awards-ukraine/image_sources_asv.csv awards-ukraine/image_sources_president.csv awards-ukraine/images_reference/ awards-ukraine/images/
+          git add awards-ukraine/missing_images.txt awards-ukraine/build_count.txt awards-ukraine/image_coverage.txt awards-ukraine/*.docx awards-ukraine/image_sources.csv awards-ukraine/image_sources_commons.csv awards-ukraine/image_sources_wikipedia.csv awards-ukraine/image_sources_english.csv awards-ukraine/image_sources_nas.csv awards-ukraine/image_sources_asv.csv awards-ukraine/image_sources_president.csv awards-ukraine/images_reference/ awards-ukraine/images/
           if ! git diff --cached --quiet; then
             git commit -m "Generate awards catalog DOCX draft"
             git push
