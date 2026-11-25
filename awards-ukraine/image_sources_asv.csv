@@ -1,0 +1,12 @@
+catalog_number,award,official_page,image_url,file,status
+1,Звання «Герой України» — орден «Золота Зірка»,https://asv.mil.gov.ua/awards/orden-zolota-zirka-vidznaky-prezydenta-ukrayiny-heroy-ukrayiny,,,ERROR_HTTPError
+8,"Орден Богдана Хмельницького I, II, III ступенів",https://asv.mil.gov.ua/awards/orden-bohdana-khmelnytskoho-i-stupenya,,,ERROR_HTTPError
+8,"Орден Богдана Хмельницького I, II, III ступенів",https://asv.mil.gov.ua/awards/orden-bohdana-khmelnytskoho-ii-stupenya,,,ERROR_HTTPError
+8,"Орден Богдана Хмельницького I, II, III ступенів",https://asv.mil.gov.ua/awards/orden-bohdana-khmelnytskoho-iii-stupenya,,,ERROR_HTTPError
+10,"Орден «За мужність» I, II, III ступенів",https://asv.mil.gov.ua/awards/orden-za-muzhnist-i-stupenya,,,ERROR_HTTPError
+10,"Орден «За мужність» I, II, III ступенів",https://asv.mil.gov.ua/awards/orden-za-muzhnist-ii-stupenya,,,ERROR_HTTPError
+10,"Орден «За мужність» I, II, III ступенів",https://asv.mil.gov.ua/awards/orden-za-muzhnist-iii-stupenya,,,ERROR_HTTPError
+12,Орден Данила Галицького,https://asv.mil.gov.ua/awards/orden-danyla-halytskoho,,,ERROR_HTTPError
+15,Медаль «За військову службу Україні»,https://asv.mil.gov.ua/awards/medal-za-viyskovu-sluzhbu-ukrayini,,,ERROR_HTTPError
+16,"Медаль «За бездоганну службу» I, II, III ступенів",https://asv.mil.gov.ua/awards/medal-za-bezdohannu-sluzhbu-iii-stupenya,,,ERROR_HTTPError
+17,Медаль «Захиснику Вітчизни»,https://asv.mil.gov.ua/awards/medal-zakhysnyku-vitchyzny,,,ERROR_HTTPError
