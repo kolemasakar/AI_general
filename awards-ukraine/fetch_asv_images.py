@@ -8,6 +8,11 @@ from PIL import Image
 root=Path(__file__).resolve().parent
 out=root/"images";out.mkdir(exist_ok=True)
 site="https://asv.mil.gov.ua"
+direct={
+ 15:"https://asv.mil.gov.ua/sites/default/files/awards/vijs-slug.png",
+ 16:"https://asv.mil.gov.ua/sites/default/files/awards/bezdog-3.png",
+ 17:"https://asv.mil.gov.ua/sites/default/files/awards/zahysnyku_vitchyzny106.png",
+}
 records={
 1:["/awards/orden-zolota-zirka-vidznaky-prezydenta-ukrayiny-heroy-ukrayiny"],
 8:["/awards/orden-bohdana-khmelnytskoho-i-stupenya","/awards/orden-bohdana-khmelnytskoho-ii-stupenya","/awards/orden-bohdana-khmelnytskoho-iii-stupenya"],
@@ -23,6 +28,16 @@ def run(pair):
  record=[]
  for path in paths:
   url=urljoin(site,path)
+  if no in direct:
+   try:
+    src=direct[no]
+    rr=requests.get(src,headers={"User-Agent":"Googlebot"},timeout=20);rr.raise_for_status()
+    with Image.open(io.BytesIO(rr.content)) as im:
+     result=out/f"asv_{no:03d}_1.png"
+     im.convert("RGBA").save(result)
+    record.append([no,names[no-1],url,src,result.name,"FOUND"])
+    return record
+   except Exception as ex: print("DIRECT_FAIL",no,type(ex).__name__)
   try:
    r=requests.get(url,timeout=20);r.raise_for_status()
    soup=BeautifulSoup(r.text,"html.parser")
