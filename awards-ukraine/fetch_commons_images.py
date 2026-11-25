@@ -5,6 +5,7 @@ Images are not resized or promoted as authentic when the match is uncertain.
 from pathlib import Path
 from difflib import SequenceMatcher
 import csv, io, re, time, unicodedata
+from concurrent.futures import ThreadPoolExecutor
 import requests
 from PIL import Image
 
@@ -41,9 +42,9 @@ def score(name, title):
     return overlap*0.85 + SequenceMatcher(None,norm(core(name)),norm(title)).ratio()*0.15
 
 def get(params):
-    for attempt in range(2):
+    for attempt in range(1):
         try:
-            r=SESSION.get(API,params=params,timeout=15);r.raise_for_status()
+            r=SESSION.get(API,params=params,timeout=8);r.raise_for_status()
             return r.json()
         except Exception:
             if attempt==0: time.sleep(1)
@@ -85,25 +86,25 @@ if p.exists():
         for row in csv.DictReader(f):
             if row.get("file") and (IMAGES / (Path(row["file"]).stem + ".png")).exists():
                 already.add(key(row["award"]))
-rows=[]
-for i,name in enumerate(NAMES,1):
+def process(entry):
+    i,name=entry
     if key(name) in already:
-        continue
+        return None
     result=search(name)
     if not result:
-        rows.append([i,name,"","","","NOT_FOUND"])
-        continue
+        return [i,name,"","","","NOT_FOUND"]
     confidence,title,url,source=result
     target=IMAGES/f"commons_{i:03d}.png"
     try:
-        resp=SESSION.get(url,timeout=20);resp.raise_for_status()
+        resp=requests.get(url,headers={"User-Agent":"UkrainianAwardsCatalog/0.2 (public research reference)"},timeout=10);resp.raise_for_status()
         with Image.open(io.BytesIO(resp.content)) as im:
             if im.width<60 or im.height<60: raise ValueError("tiny thumbnail")
             im.convert("RGBA").save(target)
-        rows.append([i,name,title,url,source,f"FOUND_SCORE_{confidence:.2f}"])
+        return [i,name,title,url,source,f"FOUND_SCORE_{confidence:.2f}"]
     except Exception as err:
-        rows.append([i,name,title,url,source,f"DOWNLOAD_ERROR_{type(err).__name__}"])
-    time.sleep(0.15)
+        return [i,name,title,url,source,f"DOWNLOAD_ERROR_{type(err).__name__}"]
+with ThreadPoolExecutor(max_workers=6) as pool:
+    rows=[r for r in pool.map(process,enumerate(NAMES,1)) if r is not None]
 with MAP.open("w",newline="",encoding="utf-8") as f:
     w=csv.writer(f);w.writerow(["catalog_number","award","commons_file","image_url","description_url","status"]);w.writerows(rows)
 print("Commons downloaded:",sum(x[-1].startswith("FOUND") for x in rows),"of",len(rows))
