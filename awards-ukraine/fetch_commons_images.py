@@ -17,7 +17,7 @@ SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "UkrainianAwardsCatalog/0.2 (public research archive; image attribution in CSV)"})
 API = "https://commons.wikimedia.org/w/api.php"
 MAP = ROOT / "image_sources_commons.csv"
-EXCLUDE = {"ribbon","ribbons","bar","ribbonbar","стрічка","планка","планки","сертифікат","посвідчення","portrait","портрет","герб","герби"}
+EXCLUDE = {"собака","dog","ribbon","ribbons","bar","ribbonbar","стрічка","планка","планки","сертифікат","посвідчення","portrait","портрет","герб","герби"}
 STOP = {"орден","медаль","відзнака","нагородний","нагрудний","знак","україни","українська","президента","звання","років","ступенів","ступеня","класу","моу","збройних","сил","і","та","за","для","iii","ii","iv","v","i"}
 
 def norm(s):
@@ -29,7 +29,7 @@ def tokens(s):
 
 def core(s):
     parts=re.findall(r"«([^»]+)»",s)
-    return (parts[0] if parts else s).strip()
+    return (parts[-1] if parts else s.split("—")[-1]).strip()
 
 def score(name, title):
     base=tokens(core(name)); t=tokens(title)
