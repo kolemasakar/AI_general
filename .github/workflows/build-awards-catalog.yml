@@ -6,6 +6,7 @@ on:
       - 'awards-ukraine/build_catalog.py'
       - 'awards-ukraine/fetch_reference_images.py'
       - 'awards-ukraine/fetch_commons_images.py'
+      - 'awards-ukraine/fetch_wikipedia_images.py'
       - '.github/workflows/build-awards-catalog.yml'
   workflow_dispatch:
 permissions:
@@ -24,13 +25,15 @@ jobs:
         run: python awards-ukraine/fetch_reference_images.py
       - name: Search Wikimedia Commons for remaining awards
         run: python awards-ukraine/fetch_commons_images.py
+      - name: Search Wikipedia award article illustrations
+        run: python awards-ukraine/fetch_wikipedia_images.py
       - name: Generate catalog
         run: python awards-ukraine/build_catalog.py
       - name: Publish document to public repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add awards-ukraine/build_count.txt awards-ukraine/image_coverage.txt awards-ukraine/*.docx awards-ukraine/image_sources.csv awards-ukraine/image_sources_commons.csv awards-ukraine/images_reference/ awards-ukraine/images/
+          git add awards-ukraine/build_count.txt awards-ukraine/image_coverage.txt awards-ukraine/*.docx awards-ukraine/image_sources.csv awards-ukraine/image_sources_commons.csv awards-ukraine/image_sources_wikipedia.csv awards-ukraine/images_reference/ awards-ukraine/images/
           if ! git diff --cached --quiet; then
             git commit -m "Generate awards catalog DOCX draft"
             git push
