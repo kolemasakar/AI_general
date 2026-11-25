@@ -17,7 +17,7 @@ SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "UkrainianAwardsCatalog/0.2 (public research archive; image attribution in CSV)"})
 API = "https://commons.wikimedia.org/w/api.php"
 MAP = ROOT / "image_sources_commons.csv"
-EXCLUDE = {"собака","dog","ribbon","ribbons","bar","ribbonbar","стрічка","планка","планки","сертифікат","посвідчення","portrait","портрет","герб","герби"}
+EXCLUDE = {"диплом","certificate","свідоцтво","посвідчення","документ","собака","dog","ribbon","ribbons","bar","ribbonbar","стрічка","планка","планки","сертифікат","посвідчення","portrait","портрет","герб","герби"}
 STOP = {"орден","медаль","відзнака","нагородний","нагрудний","знак","україни","українська","президента","звання","років","ступенів","ступеня","класу","моу","збройних","сил","і","та","за","для","iii","ii","iv","v","i"}
 
 def norm(s):
@@ -39,6 +39,7 @@ def score(name, title):
         overlap*=0.65
     bad=EXCLUDE & t
     if bad:return 0
+    if "холодна зброя" in name.casefold() and "гур" not in norm(title):return 0
     return overlap*0.85 + SequenceMatcher(None,norm(core(name)),norm(title)).ratio()*0.15
 
 def get(params):
