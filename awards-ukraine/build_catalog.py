@@ -32,6 +32,14 @@ if commons_manifest.exists():
             if item["status"].startswith("FOUND_"):
                 p = root / "images" / f"commons_{int(item['catalog_number']):03d}.png"
                 if p.exists(): commons[int(item["catalog_number"])] = p
+wiki = {}
+wiki_manifest = root / "image_sources_wikipedia.csv"
+if wiki_manifest.exists():
+    with wiki_manifest.open(encoding="utf-8", newline="") as f:
+        for item in csv.DictReader(f):
+            if item["status"].startswith("FOUND_"):
+                p = root / "images" / f"wiki_{int(item['catalog_number']):03d}.png"
+                if p.exists(): wiki[int(item["catalog_number"])] = p
 d = Document()
 section = d.sections[0]
 section.top_margin, section.bottom_margin = Cm(1.5), Cm(1.5)
@@ -57,7 +65,7 @@ for no, name in enumerate(names, 1):
     cells[0].text = str(no)
     cells[1].text = name
     key = norm(name)
-    image = sources.get(key) or commons.get(no)
+    image = sources.get(key) or commons.get(no) or wiki.get(no)
     if image:
         cells[2].paragraphs[0].add_run().add_picture(str(image), width=Cm(4))
     else:
@@ -69,5 +77,5 @@ for row in table.rows:
     row.cells[2].width = Cm(4.7)
 d.save(root / "Каталог_нагород_України_чернетка.docx")
 (root / "build_count.txt").write_text(str(len(names)) + "\n", encoding="utf-8")
-(root / "image_coverage.txt").write_text(f"total={len(names)}\nwith_image={sum(1 for i,n in enumerate(names,1) if (norm(n) in sources or i in commons))}\n",encoding="utf-8")
+(root / "image_coverage.txt").write_text(f"total={len(names)}\nwith_image={sum(1 for i,n in enumerate(names,1) if (norm(n) in sources or i in commons or i in wiki))}\n",encoding="utf-8")
 print("Records:", len(names))
