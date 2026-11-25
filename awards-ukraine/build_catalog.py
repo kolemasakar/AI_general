@@ -65,6 +65,14 @@ if asv_manifest.exists():
             if item["status"]=="FOUND":
                 pic=root/"images"/item["file"]
                 if pic.exists():asv.setdefault(int(item["catalog_number"]),pic)
+president={}
+p_manifest=root/"image_sources_president.csv"
+if p_manifest.exists():
+    with p_manifest.open(encoding="utf-8",newline="") as f:
+        for item in csv.DictReader(f):
+            if item["status"]=="FOUND":
+                p=root/"images"/f"president_{int(item['catalog_number']):03d}.png"
+                if p.exists():president[int(item["catalog_number"])]=p
 d = Document()
 section = d.sections[0]
 section.top_margin, section.bottom_margin = Cm(1.5), Cm(1.5)
@@ -90,7 +98,7 @@ for no, name in enumerate(names, 1):
     cells[0].text = str(no)
     cells[1].text = name
     key = norm(name)
-    image = nas.get(no) or asv.get(no) or sources.get(key) or english.get(no) or commons.get(no) or wiki.get(no)
+    image = president.get(no) or nas.get(no) or asv.get(no) or sources.get(key) or english.get(no) or commons.get(no) or wiki.get(no)
     if image:
         cells[2].paragraphs[0].add_run().add_picture(str(image), width=Cm(4))
     else:
@@ -102,5 +110,5 @@ for row in table.rows:
     row.cells[2].width = Cm(4.7)
 d.save(root / "Каталог_нагород_України_чернетка.docx")
 (root / "build_count.txt").write_text(str(len(names)) + "\n", encoding="utf-8")
-(root / "image_coverage.txt").write_text(f"total={len(names)}\nwith_image={sum(1 for i,n in enumerate(names,1) if (norm(n) in sources or i in commons or i in wiki or i in english or i in nas or i in asv))}\n",encoding="utf-8")
+(root / "image_coverage.txt").write_text(f"total={len(names)}\nwith_image={sum(1 for i,n in enumerate(names,1) if (norm(n) in sources or i in commons or i in wiki or i in english or i in nas or i in asv or i in president))}\n",encoding="utf-8")
 print("Records:", len(names))
