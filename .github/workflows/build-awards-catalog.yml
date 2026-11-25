@@ -4,6 +4,8 @@ on:
     paths:
       - 'awards-ukraine/catalog_names.txt'
       - 'awards-ukraine/build_catalog.py'
+      - 'awards-ukraine/fetch_reference_images.py'
+      - 'awards-ukraine/fetch_commons_images.py'
       - '.github/workflows/build-awards-catalog.yml'
   workflow_dispatch:
 permissions:
