@@ -1,5 +1,5 @@
 from pathlib import Path
-import csv, re
+import csv, re, unicodedata
 from docx import Document
 from docx.shared import Cm, Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -11,6 +11,7 @@ def norm(value):
     value = re.sub(r"^(нагрудний знак|медаль)\s+", "", value.casefold())
     found = re.findall(r"«([^»]+)»", value)
     if found: value = found[0]
+    value = unicodedata.normalize("NFC",value)
     return re.sub(r"\W+", "", value)
 
 root = Path(__file__).resolve().parent
